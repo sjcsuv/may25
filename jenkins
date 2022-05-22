@@ -25,16 +25,21 @@ pipeline {
                 echo "Password: ${params.PASSWORD}"
             }
         }
-     stage ( 'build'){
-         steps {
-             echo " this is build stage"
-         }
-     }
-     stage ( ' testing'){
-         steps {
-             echo " this is testing stage"
-         }
-     }
-         }
-     }
-         
+        stage ('build') {
+            steps {
+                echo " thhis is build"
+            }
+        }
+        stage ('testing'){
+            steps {
+                echo " this is testing"
+            }
+        }
+        stage (' deploy '){
+            steps {
+                echo " this is deploy stage"
+            }
+        }
+    }
+    
+}
